@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张瀚月 (Hanyue Zhang) - Personal Profile</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="langBtn" class="lang-btn">
+            <span class="lang-text">EN</span>
+        </button>
+    </div>
+
+    <!-- Y2K Background Elements -->
+    <div class="y2k-grid-overlay"></div>
+    <div class="digital-rain"></div>
+    <div class="bg-elements">
+        <div class="floating-star star-1"></div>
+        <div class="floating-star star-2"></div>
+        <div class="floating-star star-3"></div>
+        <div class="floating-heart heart-1"></div>
+        <div class="floating-heart heart-2"></div>
+        <!-- Y2K Elements -->
+        <div class="cyber-orb orb-1"></div>
+        <div class="cyber-orb orb-2"></div>
+        <div class="neon-line line-1"></div>
+        <div class="neon-line line-2"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Y2K Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <img src="images/profile.jpg" alt="Hanyue Zhang" class="profile-image" id="profileImg">
+                    <div class="profile-glow"></div>
+                </div>
+                <h1 class="name" data-ko="장한월" data-en="Hanyue Zhang">장한월</h1>
+                <h2 class="name-alt" data-ko="张瀚月" data-en="张瀚月">张瀚月</h2>
+                <div class="status">
+                    <span class="age">26</span>
+                    <span class="separator">◈</span>
+                    <span class="university" data-ko="한양대학교 시각디자인 석사과정" data-en="Master's in Visual Design, Hanyang University">한양대학교 시각디자인 석사과정</span>
+                </div>
+                <div class="y2k-status-bar">
+                    <div class="status-item">ONLINE</div>
+                    <div class="status-item">CREATIVE</div>
+                    <div class="status-item">2025</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h3 class="section-title" data-ko="자기소개" data-en="About Me">자기소개</h3>
+            <div class="about-content">
+                <p class="about-text" data-ko="안녕하세요, 저는 한국 한양대학교에서 시각디자인을 전공하고 있는 석사과정 학생 장한월입니다. 저의 고향은 중국 후베이성 우한이며, 현재 고양이 '하이옌(海燕)'과 함께 살고 있습니다." data-en="Hello, I'm Hanyue Zhang, a master's student in Visual Design at Hanyang University. My hometown is Wuhan, Hubei, China, and I live with my lovely cat, Haiyan.">
+                    안녕하세요, 저는 한국 한양대학교에서 시각디자인을 전공하고 있는 석사과정 학생 장한월입니다.<br>
+                    저의 고향은 중국 후베이성 우한이며, 현재 고양이 '<span class="cat-name" id="catName">하이옌(海燕)</span>'과 함께 살고 있습니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="hobbies">
+            <h3 class="section-title" data-ko="취미 & 관심사" data-en="Hobbies & Interests">취미 & 관심사</h3>
+            
+            <div class="hobby-grid">
+                <!-- Travel -->
+                <div class="hobby-card" data-category="travel">
+                    <div class="hobby-icon">✈️</div>
+                    <h4 class="hobby-title" data-ko="여행" data-en="Travel">여행</h4>
+                    <div class="hobby-preview">
+                        <div class="y2k-text">EXPLORE</div>
+                    </div>
+                </div>
+
+                <!-- Photography -->
+                <div class="hobby-card" data-category="photography">
+                    <div class="hobby-icon">📷</div>
+                    <h4 class="hobby-title" data-ko="사진" data-en="Photography">사진</h4>
+                    <div class="hobby-preview">
+                        <div class="y2k-text">CAPTURE</div>
+                    </div>
+                </div>
+
+                <!-- Design -->
+                <div class="hobby-card" data-category="design">
+                    <div class="hobby-icon">🎨</div>
+                    <h4 class="hobby-title" data-ko="디자인" data-en="Design">디자인</h4>
+                    <div class="hobby-preview">
+                        <div class="y2k-text">CREATE</div>
+                    </div>
+                </div>
+
+                <!-- TV Dramas -->
+                <div class="hobby-card" data-category="dramas">
+                    <div class="hobby-icon">📺</div>
+                    <h4 class="hobby-title" data-ko="드라마 시청" data-en="TV Dramas">드라마 시청</h4>
+                    <div class="hobby-preview">
+                        <div class="drama-flags">
+                            <span class="flag">🇰🇷</span>
+                            <span class="flag">🇺🇸</span>
+                            <span class="flag">🇬🇧</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Modal -->
+        <div class="gallery-modal" id="galleryModal">
+            <div class="gallery-content">
+                <button class="gallery-close" id="galleryClose">&times;</button>
+                <h3 class="gallery-title" id="galleryTitle"></h3>
+                <div class="gallery-items" id="galleryItems"></div>
+            </div>
+        </div>
+
+        <!-- Cat Modal -->
+        <div class="cat-modal" id="catModal">
+            <div class="cat-modal-content">
+                <img src="images/haiyan_cat.jpg" alt="Haiyan the Cat" class="cat-photo">
+                <div class="cat-caption" data-ko="귀여운 하이옌 🐱" data-en="Cute Haiyan 🐱">귀여운 하이옌 🐱</div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h3 class="section-title" data-ko="연락처" data-en="Contact">연락처</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:zhyyyy0706@gmai.com">zhyyyy0706@gmai.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📸</span>
+                    <a href="https://instagram.com/zhyyyy0706" target="_blank">@zhyyyy0706</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright" data-ko="© 2025 장한월 | 무단 복제 금지" data-en="© 2025 Hanyue Zhang | All Rights Reserved">© 2025 장한월 | 무단 복제 금지</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
